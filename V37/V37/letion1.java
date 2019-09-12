@@ -7,7 +7,7 @@ public class letion1 {
 		/* en komntar här */
 		// en till komenar här
 		
-		int heltal1 = 5;// skapar en en låda som heter heltal1 och fyller den med ett hel tal
+		int heltal1 = 5; // skapar en låda som heter heltal1 och fyller den med ett hel tal
 		int svar; //deklarera
 		
 		svar = heltal1*heltal1;
