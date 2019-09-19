@@ -7,11 +7,11 @@ public class lexsa2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int tal1;
-		int tal2;
-		int tal3;
-		int tal4;
-		int tal5;
+		double tal1;
+		double tal2;
+		double tal3;
+		double tal4;
+		double tal5;
 		
 		Scanner input = new Scanner(System.in);
 		
@@ -50,9 +50,10 @@ public class lexsa2 {
 	}
 		else if (tal5 >= tal1 && tal5 >= tal3 && tal5 >= tal4 && tal5 >= tal2) { 
 		
-		System.out.println("\nHögst:\t");
+		System.out.println("\nHögst:");
 		System.out.println(tal5 +"");
 		}
+		
 		if (tal1 <= tal2 && tal1 <= tal3 && tal1 <= tal4 && tal1 <= tal5) { 
 			
 			System.out.println("\nLägst:\t");
