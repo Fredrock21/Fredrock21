@@ -10,9 +10,15 @@ public class lektion5 {
 			// Skriver ut 0-4
 		int summa=0;
 			for (int tal = 0; tal < 100; tal++) {
-				summa=tal+summa;	
+				summa+=tal;	
 				}
 			System.out.println(summa);
+			
+			for (int i = 25; i < 51; i++) {
+				System.out.println(i);			
+			}
+			
+			
 			}
 
 	}
