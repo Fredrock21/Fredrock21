@@ -9,8 +9,11 @@
 			boolean agein = true;
 			int svar = 1;
 			int age = 0; // initierat variabel
+			boolean reapeat = true;
 	
 			Scanner input = new Scanner(System.in); // gör det
+			
+			while (reapeat)
 	 
 			if (agein) {
 	
