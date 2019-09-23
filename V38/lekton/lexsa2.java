@@ -85,7 +85,7 @@ public class lexsa2 {
 		System.out.println(tal5 +"");
 		}
 		
-		System.out.println("\nMedian:");
-		System.out.println((tal1 + tal2 + tal3 + tal4 + tal5)/5);
+		System.out.println("\nMedelvärde:");
+		System.out.println((tal1 + tal2 + tal3 + tal4 + tal5)/5.0);
 	}
 }
