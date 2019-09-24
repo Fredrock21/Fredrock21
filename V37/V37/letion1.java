@@ -20,11 +20,6 @@ public class letion1 {
 		double area = pi*radie*radie;
 		
 		System.out.println("arean är:" + area + "cm^2");
-		
-		long stortHeltal = 5000000000000L;
-		
-		System.out.println(storHeltal + 1);
-
-	}
+			}
 
 }

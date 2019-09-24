@@ -12,16 +12,16 @@ public class QuadrantSelection {
 		int y = input.nextInt();
 		
 		if(x>0 && y>0){
-			System.out.println("Quadrant 1");
+			System.out.println("1");
 		}
 		if(x<0 && y>0){
-			System.out.println("Quadrant 2");
+			System.out.println("2");
 		}
 		if(x<0 && y<0){
-			System.out.println("Quadrant 3");
+			System.out.println("3");
 		}
 		if(x>0 && y<0){
-			System.out.println("Quadrant 4");
+			System.out.println("4");
 		}
 		
 	}
