@@ -33,7 +33,22 @@ public class lektion5 {
 				System.out.println(prudukt);
 
 				}
+			boolean exit = false;
 			
+			while(!exit){
+				
+				int sifra = input.nextInt();
+				int allasifror = 0;
+				
+						System.out.println("sifra");
+				allasifror+=sifra;
+				
+				if (sifra == 0){
+					exit = true;
 			}
-
+				System.out.println(allasifror);
+		}
+			
+			
 	}
+}
