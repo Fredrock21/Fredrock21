@@ -25,12 +25,12 @@ public class Spavanac {
 			M=M1+60;
 			System.out.println(H+" "+M);
 		}
-		else if (H == 0 && M1 <= 0)
+		else if (H == 0 && M1 <= 0) {
 			
 			M = M1+60;
 		System.out.println(23+" "+M);
 		
 		}
 	}
-
+}
 
