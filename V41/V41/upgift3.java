@@ -20,6 +20,8 @@ public class upgift3 {
 			sum += tal;
 			if (tal.equals("0")) {
 				exit = true;
+				System.out.println(sum);
+				System.out.println(sum/i);
 			}
 			
 		}
