@@ -9,16 +9,17 @@ public class upgift3 {
 	Scanner input = new Scanner(System.in);
 		
 		boolean exit = false;
-		int i = 0;
-		int sum = 0;
+		double i = -1.0;
+		double sum = 0.0;
+		double tal;
 		
 		do {
 			
-			String tal = input.nextLine();
+			tal = input.nextInt();
 			System.out.println(tal);
-			i += 1;
+			i += 1.0;
 			sum += tal;
-			if (tal.equals("0")) {
+			if (tal == 0) {
 				exit = true;
 				System.out.println(sum);
 				System.out.println(sum/i);
