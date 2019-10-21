@@ -9,6 +9,7 @@ public class upgift7text2 {
 			Scanner input = new Scanner(System.in);
 			
 			System.out.println("Skriv in storleken på kvadraten: ");
+			
 			int size = input.nextInt();
 			
 			for (int i = 0; i < size; i++) { //Loop för varje rad

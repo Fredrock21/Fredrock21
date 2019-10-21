@@ -11,11 +11,14 @@ public class upgift7 {
 	int N = input.nextInt();
 	
 	for (int i = 0; i < N; i++) {
-		System.out.println("$");
+		
+		for (int L=0 ; L < N; L++) {
+			if (i == 0 ||  )
+			
+		}
 		
 		
-		
-	}
+		}
 	}
 
 }
