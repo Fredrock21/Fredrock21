@@ -3,13 +3,21 @@ package V43;
 import java.util.Scanner;
 
 public class Letion7 {
-
+ 
 	public static void main(String[] args) {
+		twoNumbers();
 		
-		
+		}
+	/**
+	 * Skriver två heltal och sikar vidare.
+	 */
+	
+	public static void twoNumbers(){
 		int tal1;
 		int tal2;
 		Scanner input = new Scanner(System.in);
+		
+		
 		
 		System.out.println("vänligen skriv in två hel tall");
 		
@@ -18,8 +26,15 @@ public class Letion7 {
 		
 		System.out.println(minstatal(tal1, tal2));
 		
-	
-		}
+		
+	}
+	/**
+	 * Jämför två tal och skriver viket som är minst. 
+	 * Och jer tlibaka en helsining.
+	 * @param tal3
+	 * @param tal4
+	 * @return String hej++
+	 */
 	public static String minstatal(int tal3, int tal4) {
 	
 		if(tal3 <= tal4) {
@@ -29,7 +44,7 @@ public class Letion7 {
 	else {
 		System.out.println("minsra talet är:" + tal4);
 	}
-	String hej = "metoden är klar";
+	String hej = "pogramet är färdigt";
 	
 	return hej;
 	}
