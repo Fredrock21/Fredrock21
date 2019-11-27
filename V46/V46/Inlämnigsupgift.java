@@ -17,10 +17,10 @@ public class Inlämnigsupgift {
 		
 		System.out.println(kelvinToCelsius(k));
 		
-		double kms ;
-		kms = input.nextInt();
+		double kmh ;
+		kmh = input.nextInt();
 		
-		System.out.println(velocityConversion(kms));
+		System.out.println(velocityConversion(kmh));
 		
 		System.out.println("masan");
 		double mass;
@@ -122,13 +122,23 @@ public class Inlämnigsupgift {
 			
 		System.out.println(Sista(klar));
 	}
-	
+	/**
+	 * tar emot F som är fahermheit 
+	 * @param F
+	 * endrar fahrenheit till Kelvin "K"
+	 * @return K
+	 */
 	public static double fahrenheitToKelvin (double F){
 		
 		double K = (F + 459.15)*5/9;
 		return K;		
 	}
-	
+	/**
+	 * tar emot kelvin som är "k"
+	 * @param k
+	 * ovandlar till Celsius "C"
+	 * @return C
+	 */
 	public static double kelvinToCelsius (double k) {
 		
 		
@@ -137,9 +147,15 @@ public class Inlämnigsupgift {
 		
 	
 	}
-	public static double velocityConversion (double kms ) {
+	/**
+	 * tar in double kmh (Km/h) 
+	 * @param kms
+	 * endrar den till (M/s) döper det till "ms"
+	 * @return ms 
+	 */
+	public static double velocityConversion (double kmh ) {
 		
-		double ms = (kms/3.6);
+		double ms = (kmh/3.6);
 		return ms;	
 	}
 	/**
@@ -154,8 +170,12 @@ public class Inlämnigsupgift {
 		
 		return  kinetiskenergi;
 	}
-	
-	
+	/**
+	 * 
+	 * @param mass
+	 * @param height
+	 * @return
+	 */
 	public static double potentialEnergy(double mass, double height) {
 			
 		double g = 9.82;
@@ -164,6 +184,15 @@ public class Inlämnigsupgift {
 		
 		return  potentiellenergi;
 	}
+	/**
+	 * tar emot tre Dobels first, second och last.
+	 * @param first
+	 * @param second
+	 * @param last
+	 * deelar dom på re och får fram medelvärdet.
+	 * Döper den till "medel".
+	 * @return medel
+	 */
 	public static double delta(double first, double second, double last) {
 		
 		double medel = (first+second+last)/3;
@@ -171,11 +200,24 @@ public class Inlämnigsupgift {
 		return medel;
 		
 	}
+	/**
+	 * tar emot strängen word 
+	 * @param word
+	 * endrar word till små mogstäver 
+	 * @return word
+	 */
 	public static String smallLetters(String word) {
 		
 		return word.toLowerCase();
 		
 	}
+	/**
+	 * tar emot strängen menig.
+	 * @param menig
+	 * omvandlar först alla till stora bostäver och sen alla stora o till 0.
+	 * döper om strengen till "M"
+	 * @return M
+	 */
 	public static String pr0grammering(String menig) {
 	
 		String M = menig.replace('O', '0').toUpperCase();
@@ -183,6 +225,13 @@ public class Inlämnigsupgift {
 		return M;
 		
 	}
+	/**
+	 * tar emot doubles distance och velocity2.
+	 * @param distance
+	 * @param velocity
+	 * räknar utt tiden med formen (s/V) och döper den till "Tid"
+	 * @return Tid
+	 */
 	public static double svtTime(double distance, double velocity) {
 		
 		double Tid = (distance)/velocity;
@@ -190,6 +239,13 @@ public class Inlämnigsupgift {
 		return Tid;
 		
 	}
+	/**
+	 * tar emot doubes force och distance2.
+	 * @param force
+	 * @param distance
+	 * sen räkanas arbetet ut med formen (W = F*s)
+	 * @return Arbete
+	 */
 	public static double work(double force, double distance) {
 		
 		double Arbete = force*distance;
@@ -197,6 +253,12 @@ public class Inlämnigsupgift {
 		return Arbete;
 		
 	}
+	/**
+	 * tar emot double velocity3  
+	 * @param velocity
+	 * räknar ut höjden och ger den namnet "P"
+	 * @return P
+	 */
 	public static double velocityToHeight(double velocity) {
 		
 		double g = 9.82;
@@ -206,6 +268,12 @@ public class Inlämnigsupgift {
 		return P;
 		
 	}
+	/**
+	 * tar emot doublen Volume  
+	 * @param Volume
+	 * sen räknar jag ut radien och ger den namnet "W"
+	 * @return W
+	 */
 	public static double sphereVolumeToRadius(double Volume) {
 		
 		double W = ((((Volume)*3)/4)/Math.PI);
@@ -215,17 +283,25 @@ public class Inlämnigsupgift {
 	
 		
 	}
+	/**
+	 * den ter emot doubles
+	 * @param massa
+	 * @param hagt
+	 * @param tid
+	 * och räkanr ut den effekt merd ekvatonen (P = m*g*h/tid).
+	 * @return P
+	 */
 	public static double effektavdenpotensielaenergin(double massa,double hagt,double tid) {
 		double g = 9.82;
 		
-		double Ep = (massa*hagt*g)/tid;
+		double P = (massa*hagt*g)/tid;
 		
-		return Ep;
+		return P;
 	}
 	/**
 	 * tar in strengen "klar".
 	 * komadet .length() räknar ut hur lång radenär.
-	 * skickar tilbaka 
+	 * skickar tilbaka metoden.
 	 * 
 	 * @param klar
 	 * @return
