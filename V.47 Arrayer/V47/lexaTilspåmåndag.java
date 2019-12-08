@@ -36,6 +36,12 @@ public class lexaTilspåmåndag {
 		System.out.println(felest(names));
 
 	}
+	/**
+	 * när numbers[i] är likamed 7 ökar sum med 1
+	 * @param numbers
+	 * retunerar sum.
+	 * @return
+	 */
 	public static int hurmånga7(int[] numbers) {
 		
 		int sum = 0;
@@ -48,6 +54,12 @@ public class lexaTilspåmåndag {
 		return sum; 
 	
 	}
+	/**
+	 * när names[i] är lika med Tom ökar sum med 1.  
+	 * @param names
+	 * return sum.
+	 * @return
+	 */
 	public static int finstom(String[] names){
 		
 		int sum = 0;
@@ -61,8 +73,10 @@ public class lexaTilspåmåndag {
 	/**
 	 * har två variabler most och max.
 	 * kolar egenoem 0-9 med en for loop.
-	 * 
+	 * sen med hjälp vaiaben amunt vilket tal som är störst.
+	 * när amunt är störe en max endas most till i. 
 	 * @param numbers
+	 * return moste
 	 * @return
 	 */
 	private static int mestnummer(int[] numbers) {
