@@ -19,7 +19,8 @@ public class lexaTilspåmåndag {
 		
 		System.out.println(mestnummer(numbers));
 		
-		System.out.println(minstnummer(numbers));
+		System.out.println(
+				minstnummer(numbers));
 		
 		System.out.println(Drusilla(names));
 		
