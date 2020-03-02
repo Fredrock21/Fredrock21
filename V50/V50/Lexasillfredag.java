@@ -26,6 +26,7 @@ public class Lexasillfredag {
 				success = true;
 			}
 			else {
+				input.next();
 				System.out.println("du är fel");
 				
 			}

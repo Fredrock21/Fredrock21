@@ -17,11 +17,23 @@ public class gisningslek {
 			System.out.println("[3] svår 1-1000");
 			System.out.println();
 
-			int choice;
-
-			choice = input.nextInt();
-
+			int choice = 0;
+			
+			boolean validInput = false;
+			while (!validInput) {
+				try {
+					choice = input.nextInt();
+					validInput = true;
+						
+					} catch (Exception e) {
+						input.next();
+						System.out.println("skriv in 1,2 eller 3 ");
+					}
+			}
+			
+			
 			switch (choice) {
+			
 			case 1:
 				System.out.println("du valde lätt");
 				long lätt = Math.round((Math.random() * 10));
@@ -54,33 +66,51 @@ public class gisningslek {
 				break;
 
 			}
+			
 			String J;
 			System.out.println("vill du spela i gen?");
 			System.out.println("ja eller nej");
-
+			
+			input.nextLine();// går till nesta rad 
+			
 			J = input.nextLine();
+			
 
 			if (J.equals("ja")) {
 				System.out.println("bra");
 
-			} else {
-				System.out.println("okej");
+			} 
+			
+			else {
+				System.out.println("okej ha de bra");
 				success = true;
 			}
-		}
+		
+			
 	}
-
+}
 	public static void lättaste(long lätt) {
 
-		int svar;
+		int svar = 0;
 
 		int gisnigar = 5;
 
 		boolean exit = false;
 
 		while (!exit) {
-
-			svar = input.nextInt();
+			
+			boolean validInput = false;
+			while (!validInput) {
+				try {
+					svar = input.nextInt();
+					validInput = true;
+						
+					} catch (Exception e) {
+						input.next();
+						System.out.println("svara med en sifra ");
+					}
+			}
+			
 
 			if (svar == lätt) {
 				exit = true;
@@ -104,7 +134,7 @@ public class gisningslek {
 			if (gisnigar == 0) {
 
 				exit = true;
-				System.out.println("du mislykades inga gisnaigar kavr");
+				System.out.println("du mislykades svaret var" + lätt);
 			}
 
 		}
@@ -113,7 +143,7 @@ public class gisningslek {
 
 	public static void mellan(long medel) {
 
-		int svar;
+		int svar = 0;
 
 		int gisnigar = 5;
 
@@ -121,7 +151,17 @@ public class gisningslek {
 
 		while (!exit) {
 
-			svar = input.nextInt();
+			boolean validInput = false;
+			while (!validInput) {
+				try {
+					svar = input.nextInt();
+					validInput = true;
+						
+					} catch (Exception e) {
+						input.next();
+						System.out.println("svara med en sifra ");
+					}
+			}
 
 			if (svar == medel) {
 				exit = true;
@@ -145,7 +185,7 @@ public class gisningslek {
 			if (gisnigar == 0) {
 
 				exit = true;
-				System.out.println("du mislykades inga gisnaigar kavr");
+				System.out.println("du mislykades svaret var" + medel);
 			}
 
 		}
@@ -154,7 +194,7 @@ public class gisningslek {
 
 	public static void svåraste(long svår) {
 
-		int svar;
+		int svar = 0;
 
 		int gisnigar = 5;
 
@@ -162,7 +202,17 @@ public class gisningslek {
 
 		while (!exit) {
 
-			svar = input.nextInt();
+			boolean validInput = false;
+			while (!validInput) {
+				try {
+					svar = input.nextInt();
+					validInput = true;
+						
+					} catch (Exception e) {
+						input.next();
+						System.out.println("svara med en sifra ");
+					}
+			}
 
 			if (svar == svår) {
 				exit = true;
@@ -186,7 +236,7 @@ public class gisningslek {
 			if (gisnigar == 0) {
 
 				exit = true;
-				System.out.println("du mislykades inga gisnaigar kavr");
+				System.out.println("du mislykades svaret var" + svår);
 			}
 
 		}
