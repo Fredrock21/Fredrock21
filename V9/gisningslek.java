@@ -69,7 +69,7 @@ public class gisningslek {
 			
 			String J;
 			System.out.println("vill du spela i gen?");
-			System.out.println("ja eller nej");
+			System.out.println("skriv ja om du vill fortsäta");
 			
 			input.nextLine();// går till nesta rad 
 			
