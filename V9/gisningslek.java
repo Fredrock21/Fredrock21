@@ -26,7 +26,7 @@ public class gisningslek {
 					validInput = true;
 						
 					} catch (Exception e) {
-						input.next();
+						input.nextLine();
 						System.out.println("skriv in 1,2 eller 3 ");
 					}
 			}
@@ -89,6 +89,14 @@ public class gisningslek {
 			
 	}
 }
+	
+	/**
+	 * tar in lång lätt
+	 * @param lätt
+	 * kolar om svar är ett giltit (try/catch)
+	 * kollar om svar ät = lätt.
+	 * koden slurar när svar = lätt eller gisnigar = 0. 
+	 */
 	public static void lättaste(long lätt) {
 
 		int svar = 0;
@@ -106,7 +114,7 @@ public class gisningslek {
 					validInput = true;
 						
 					} catch (Exception e) {
-						input.next();
+						input.nextLine();
 						System.out.println("svara med en sifra ");
 					}
 			}
@@ -114,7 +122,7 @@ public class gisningslek {
 
 			if (svar == lätt) {
 				exit = true;
-				System.out.println("du har rett de svaret var " + lätt);
+				System.out.println("du har rätt de svaret var " + lätt);
 
 			}
 
@@ -140,6 +148,13 @@ public class gisningslek {
 		}
 
 	}
+	/**
+	 * tar in lång medel
+	 * @param lätt
+	 * kolar om svar är ett giltit (try/catch)
+	 * kollar om svar ät = lätt.
+	 * koden slurar när svar = medel eller gisnigar = 0. 
+	 */
 
 	public static void mellan(long medel) {
 
@@ -158,14 +173,14 @@ public class gisningslek {
 					validInput = true;
 						
 					} catch (Exception e) {
-						input.next();
+						input.nextLine();
 						System.out.println("svara med en sifra ");
 					}
 			}
 
 			if (svar == medel) {
 				exit = true;
-				System.out.println("du har rett de svaret var " + medel);
+				System.out.println("du har rätt de svaret var " + medel);
 
 			}
 
@@ -191,6 +206,13 @@ public class gisningslek {
 		}
 
 	}
+	/**
+	 * tar in lång svår
+	 * @param lätt
+	 * kolar om svar är ett giltit (try/catch)
+	 * kollar om svar ät = lätt.
+	 * koden slurar när svar = svår eller gisnigar = 0. 
+	 */
 
 	public static void svåraste(long svår) {
 
@@ -209,14 +231,14 @@ public class gisningslek {
 					validInput = true;
 						
 					} catch (Exception e) {
-						input.next();
+						input.nextLine();
 						System.out.println("svara med en sifra ");
 					}
 			}
 
 			if (svar == svår) {
 				exit = true;
-				System.out.println("du har rett svaret var " + svår);
+				System.out.println("du har rätt svaret var " + svår);
 
 			}
 
