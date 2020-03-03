@@ -142,7 +142,7 @@ public class gisningslek {
 			if (gisnigar == 0) {
 
 				exit = true;
-				System.out.println("du mislykades svaret var" + lätt);
+				System.out.println("du mislykades svaret var " + lätt);
 			}
 
 		}
@@ -200,7 +200,7 @@ public class gisningslek {
 			if (gisnigar == 0) {
 
 				exit = true;
-				System.out.println("du mislykades svaret var" + medel);
+				System.out.println("du mislykades svaret var " + medel);
 			}
 
 		}
@@ -258,7 +258,7 @@ public class gisningslek {
 			if (gisnigar == 0) {
 
 				exit = true;
-				System.out.println("du mislykades svaret var" + svår);
+				System.out.println("du mislykades svaret var " + svår);
 			}
 
 		}
