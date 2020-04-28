@@ -29,10 +29,12 @@ public class förstahengagubbentest {
 		Gissa(ordLista);
 		
 		System.out.println("orddet var " + orddet);
-		String J;
+		
+		
 		System.out.println("skriv ja om du vill solea igen"
 				+ " anars klikan vidare");
-		
+		String J;
+		input.nextLine();
 		
 		J = input.nextLine();
 		
@@ -73,8 +75,6 @@ public class förstahengagubbentest {
 		while(!försök){
 			String giss = input.next().toLowerCase();
 			
-			
-			
 			miss = 0;
 		
 			
@@ -83,7 +83,12 @@ public class förstahengagubbentest {
 				if(giss.charAt(0) == falskordLista.get(i)){
 				
 					lykanden--;
-					System.out.println("Skriv inte samma ord 2 onger");
+					System.out.println("Skriv inte samma ord 2 gonger");
+					
+				}
+				if(giss.length() != 1){
+					
+					System.out.println("skriv inte feller bokstäver");
 				}
 				if(giss.charAt(0) == ordLista.get(i)) {
 				
@@ -98,7 +103,7 @@ public class förstahengagubbentest {
 					miss ++;
 				}
 					
-				
+				System.out.println(lykanden);
 			}
 			
 			if(miss == antalord) {
