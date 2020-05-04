@@ -16,7 +16,14 @@ public class förstahengagubbentest {
 		 
 		String orddet = ord[(int)(Math.random()*10)];
 		
-		System.out.println(orddet);
+		System.out.println("Detta är hängagubbe du ska gissa rätt på ett ord.");
+		System.out.println("Skriv in en bokstav och om den finns i ordet kommer du se det.");
+		System.out.println("Om du gissar fel kommer gubben örja hängas");
+		System.out.println("När gubben är hängd har du förlorat.");
+		System.out.println("För att vinna måste du visa alla bokstäver i ordet.");
+		System.out.println("Skriv inte mer än en bokstav i taget");
+
+		
 		
 		ArrayList<Character> ordLista = new ArrayList<Character>();
 		
@@ -60,11 +67,10 @@ public class förstahengagubbentest {
 		int lykanden = 0;
 		int miss = 0;
 		
-		
 		for (int i = 0; i < ordLista.size(); i++) {
 			antalord = i+1;	
 		}
-		System.out.println(antalord);
+		
 		
 		ArrayList<Character> falskordLista = new ArrayList<Character>();
 		
@@ -73,10 +79,23 @@ public class förstahengagubbentest {
 		}
 		
 		while(!försök){
-			String giss = input.next().toLowerCase();
+			String giss = input.nextLine().toLowerCase().trim();
 			
 			miss = 0;
-		
+			
+			System.out.println(giss);
+			
+			
+
+			
+			if(giss.length() != 1){
+				
+				System.out.println("skriv inte feller bokstäver");
+				System.out.println("försök i gen");
+				continue;
+			}
+			else {
+				
 			
 			for (int i = 0; i < ordLista.size(); i++) {
 				
@@ -85,11 +104,9 @@ public class förstahengagubbentest {
 					lykanden--;
 					System.out.println("Skriv inte samma ord 2 gonger");
 					
-				}
-				if(giss.length() != 1){
 					
-					System.out.println("skriv inte feller bokstäver");
 				}
+				
 				if(giss.charAt(0) == ordLista.get(i)) {
 				
 				  lykanden++;
@@ -102,8 +119,10 @@ public class förstahengagubbentest {
 				else {
 					miss ++;
 				}
+				
 					
-				System.out.println(lykanden);
+				
+			}
 			}
 			
 			if(miss == antalord) {
