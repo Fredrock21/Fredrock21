@@ -6,9 +6,17 @@ public class förstahengagubbentest {
 	
 	public static void main(String[] args) {
 		
+		System.out.println("Detta är hängagubbe du ska gissa rätt på ett ord.");
+		System.out.println("Skriv in en bokstav och om den finns i ordet kommer du se det.");
+		System.out.println("Om du gissar fel kommer gubben örja hängas");
+		System.out.println("När gubben är hängd har du förlorat.");
+		System.out.println("För att vinna måste du visa alla bokstäver i ordet.");
+		System.out.println("Skriv inte mer än en bokstav i taget");
+		
 		boolean spel = false;
 		while (!spel) {
 
+		
 		
 		String[] ord = {"lo","oxe","cat","örn","björn","varg"
 				,"hund","lax","räv","uggla","råtta"};
@@ -16,12 +24,7 @@ public class förstahengagubbentest {
 		 
 		String orddet = ord[(int)(Math.random()*10)];
 		
-		System.out.println("Detta är hängagubbe du ska gissa rätt på ett ord.");
-		System.out.println("Skriv in en bokstav och om den finns i ordet kommer du se det.");
-		System.out.println("Om du gissar fel kommer gubben örja hängas");
-		System.out.println("När gubben är hängd har du förlorat.");
-		System.out.println("För att vinna måste du visa alla bokstäver i ordet.");
-		System.out.println("Skriv inte mer än en bokstav i taget");
+		
 
 		
 		
@@ -38,10 +41,10 @@ public class förstahengagubbentest {
 		System.out.println("orddet var " + orddet);
 		
 		
-		System.out.println("skriv ja om du vill solea igen"
+		System.out.println("skriv ja om du vill spela igen"
 				+ " anars klikan vidare");
 		String J;
-		input.nextLine();
+		
 		
 		J = input.nextLine();
 		
@@ -59,6 +62,11 @@ public class förstahengagubbentest {
 		
 		
 	}
+	/**
+	 * denna metoden köter bokstavs gissnaiga.
+	 * samt ser att du bara skriver en karaktär. 
+	 * @param ordLista
+	 */
 	public static void Gissa(ArrayList<Character> ordLista) {
 		
 		boolean försök = false;
@@ -73,8 +81,9 @@ public class förstahengagubbentest {
 		
 		
 		ArrayList<Character> falskordLista = new ArrayList<Character>();
+		 
 		
-		for (int i = 0; i < antalord; i++) {
+		for (int i = 0; i < antalord; i++) { //skapar en array med bara "_"
 			falskordLista.add('_');
 		}
 		
@@ -83,12 +92,10 @@ public class förstahengagubbentest {
 			
 			miss = 0;
 			
-			System.out.println(giss);
+	
 			
-			
-
-			
-			if(giss.length() != 1){
+					
+			if(giss.length() != 1){ //kollar så inte giss har fler karaktärer
 				
 				System.out.println("skriv inte feller bokstäver");
 				System.out.println("försök i gen");
@@ -107,7 +114,8 @@ public class förstahengagubbentest {
 					
 				}
 				
-				if(giss.charAt(0) == ordLista.get(i)) {
+				if(giss.charAt(0) == ordLista.get(i)) { 
+					//läger in karaktären på rätt palt i understreks tabeln.  
 				
 				  lykanden++;
 				  
@@ -135,6 +143,7 @@ public class förstahengagubbentest {
 			
 			
 				if(mislykaden == 7) {
+					
 					 System.out.println("du mislykades");
 					 
 					 försök = true;
@@ -156,7 +165,10 @@ public class förstahengagubbentest {
 			
 			
 	}
-	
+	/**
+	 * Tar in en int och ritar ret aski bild.
+	 * @param mislykaden
+	 */
 	public static void aski(int mislykaden) {
 		
 		if(mislykaden == 1) {
@@ -212,7 +224,7 @@ public class förstahengagubbentest {
 		}
 		if(mislykaden == 6) {
 			System.out.println(""
-					+ "+---+\r\n" + 
+					+ "  +---+\r\n" + 
 					"  |   |\r\n" + 
 					"  O   |\r\n" + 
 					" /|\\  |\r\n" + 
@@ -222,7 +234,7 @@ public class förstahengagubbentest {
 		}
 		if(mislykaden == 7) {
 			System.out.println(""
-					+ "+---+\r\n" + 
+					+ "  +---+\r\n" + 
 					"  |   |\r\n" + 
 					"  O   |\r\n" + 
 					" /|\\  |\r\n" + 
