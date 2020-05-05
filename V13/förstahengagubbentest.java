@@ -5,28 +5,45 @@ public class förstahengagubbentest {
 	private static Scanner input = new Scanner(System.in);
 	
 	public static void main(String[] args) {
+		int choice = 0;
+		System.out.println("Detta är spelet Hänga gubben");
+		System.out.println("Vet du hur man gör? Välj genom att klicka 1,2 eller 3.");
 		
-		System.out.println("Detta är hängagubbe du ska gissa rätt på ett ord.");
-		System.out.println("Skriv in en bokstav och om den finns i ordet kommer du se det.");
-		System.out.println("Om du gissar fel kommer gubben örja hängas");
-		System.out.println("När gubben är hängd har du förlorat.");
-		System.out.println("För att vinna måste du visa alla bokstäver i ordet.");
-		System.out.println("Skriv inte mer än en bokstav i taget");
+		System.out.println("[1] Nej! ");
+		System.out.println("[2] Ja, men jag vill ha instruktionen igen ");
+		System.out.println("[3] Ja och jag vet hur man gör.");
+		System.out.println();
+		
+		boolean menyn = false;
+		
+		while (!menyn) {
+		
+			try {	
+		choice = input.nextInt();
+				
+			}catch (Exception e) {
+				input.nextLine();
+				System.out.println("skriv in 1,2 eller 3 ");
+			}
+		
+		meny(choice);
+		
+		if(choice == 1 ||choice == 2 ||choice == 3) {
+			menyn = true;
+		}
+		
+		}
+		
+		input.nextLine();
 		
 		boolean spel = false;
 		while (!spel) {
 
-		
-		
-		String[] ord = {"lo","oxe","cat","örn","björn","varg"
+		String[] ord = {"lo","oxe","katt","örn","björn","varg"
 				,"hund","lax","räv","uggla","råtta"};
 		
 		 
 		String orddet = ord[(int)(Math.random()*10)];
-		
-		
-
-		
 		
 		ArrayList<Character> ordLista = new ArrayList<Character>();
 		
@@ -38,11 +55,11 @@ public class förstahengagubbentest {
 		
 		Gissa(ordLista);
 		
-		System.out.println("orddet var " + orddet);
+		System.out.println("ordet var " + orddet);
 		
 		
 		System.out.println("skriv ja om du vill spela igen"
-				+ " anars klikan vidare");
+				+ " annars klicka vidare");
 		String J;
 		
 		
@@ -60,8 +77,55 @@ public class förstahengagubbentest {
 		}
 	}
 		
-		
 	}
+	public static void meny(int choice) {
+		
+
+		switch (choice) {
+		
+		case 1:
+			System.out.println("Du ska ta reda på det hemliga ordet ");
+			System.out.println("innan gubben hängs. Välj en bokstav i");
+			System.out.println("taget, du får svar direkt om det är rätt.");
+			System.out.println("Om du har fel börjar gubben hängas.");
+			System.out.println("Du vinner om du får fram hela ordet innan");
+			System.out.println("gubben dör.");
+
+			
+
+			break;
+
+		case 2:
+			System.out.println("Du ska ta reda på det hemliga ordet ");
+			System.out.println("innan gubben hängs. Välj en bokstav i");
+			System.out.println("taget, du får svar direkt om det är rätt.");
+			System.out.println("Om du har fel börjar gubben hängas.");
+			System.out.println("Du vinner om du får fram hela ordet innan");
+			System.out.println("gubben dör.");
+			
+			
+
+			
+			break;
+
+		case 3:
+			System.out.println("ok lycka till!");
+			
+			
+
+			break;
+
+		default:
+
+			System.out.println("det finns bara 3 möjligheter");
+
+			break;
+
+		}
+	
+	}
+	
+	
 	/**
 	 * denna metoden köter bokstavs gissnaiga.
 	 * samt ser att du bara skriver en karaktär. 
@@ -144,7 +208,7 @@ public class förstahengagubbentest {
 			
 				if(mislykaden == 7) {
 					
-					 System.out.println("du mislykades");
+					 System.out.println("du misslyckades");
 					 
 					 försök = true;
 					 
@@ -152,7 +216,7 @@ public class förstahengagubbentest {
 				}
 				if(lykanden == antalord) {
 					försök = true;
-					System.out.println("du lykades");
+					System.out.println("du lyckades");
 					
 				}
 			
