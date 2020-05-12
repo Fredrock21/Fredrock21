@@ -186,9 +186,6 @@ public class förstahengagubbentest {
 				mislykaden++;
 
 				aski(mislykaden);
-				
-				
-				
 				dinagissnigar(gisnigslista, giss);
 			}
 			
